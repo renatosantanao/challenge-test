@@ -3,6 +3,7 @@ package Page;
 import Map.CompraElementMap;
 import Support.TestRunner;
 import org.openqa.selenium.support.PageFactory;
+import static org.junit.Assert.*;
 
 public class CompraPage extends CompraElementMap {
     public CompraPage(){
@@ -20,5 +21,6 @@ public class CompraPage extends CompraElementMap {
 
     public void validarBusca() {
         identifcar_produto.isDisplayed();
+        assertTrue(identifcar_produto.isDisplayed());
     }
 }
