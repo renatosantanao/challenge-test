@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/Feature/Compra.feature",
         glue = {""},
         monochrome = true,
+        tags = {"@carrinho"},
         dryRun = false)
 public class CompraTest {
 }
