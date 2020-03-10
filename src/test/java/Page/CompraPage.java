@@ -49,4 +49,13 @@ public class CompraPage extends CompraElementMap {
     public void validarProduto() {
         assertTrue(produto_no_carrinho.isDisplayed());
     }
+
+    public void compraProdutoSemCep() {
+        assertTrue(nome_produto.isDisplayed());
+        WebDriverWait wait = new WebDriverWait(TestRunner.getDriver(), 20);
+        wait.until(ExpectedConditions.visibilityOf(botao_comprar));
+        botao_comprar.click();
+        wait.until(ExpectedConditions.elementToBeClickable(botao_continuar));
+        botao_continuar.click();
+    }
 }

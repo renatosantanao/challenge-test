@@ -16,6 +16,13 @@ Funcionalidade: Compra
   @carrinho
   Cenario: Adiconar um produto ao carrinho
     E na pagina do retorno da busca, clico sobre o produto
-    Mas na pagina do detalhe do produto clico no botao Comprar
+    Mas na pagina do detalhe do produto, informo cep e clico no botao Comprar
+    Entao o usuario sera redirecionado para tela do carrinho de compra
+    E nesta tela o usuario confere o produto adicionado
+
+  @semcep
+  Cenario: Adiconar um produto ao carrinho
+    E na pagina do retorno da busca, clico sobre o produto
+    Mas na pagina do detalhe do produto, nao informo cep e clico no botao Comprar
     Entao o usuario sera redirecionado para tela do carrinho de compra
     E nesta tela o usuario confere o produto adicionado

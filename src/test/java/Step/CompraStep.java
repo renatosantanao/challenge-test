@@ -32,10 +32,16 @@ public class CompraStep {
         compraPage.clickEmProduto();
     }
 
-    @Quando("^na pagina do detalhe do produto clico no botao Comprar$")
+    @Quando("^na pagina do detalhe do produto, informo cep e clico no botao Comprar$")
     public void na_pagina_do_detalhe_do_produto_clico_no_botao_Comprar() throws Throwable {
         CompraPage compraPage =  new CompraPage();
         compraPage.compraProduto();
+    }
+
+    @Quando("^na pagina do detalhe do produto, nao informo cep e clico no botao Comprar$")
+    public void na_pagina_do_detalhe_do_produto_nao_informo_cep_clico_no_botao_Comprar() throws Throwable {
+        CompraPage compraPage =  new CompraPage();
+        compraPage.compraProdutoSemCep();
     }
 
     @Entao("^o usuario sera redirecionado para tela do carrinho de compra$")
